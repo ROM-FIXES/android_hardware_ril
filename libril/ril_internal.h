@@ -19,11 +19,15 @@
 
 namespace android {
 
-#define RIL_SERVICE_NAME_BASE "slot"
-#define RIL1_SERVICE_NAME "slot1"
-#define RIL2_SERVICE_NAME "slot2"
-#define RIL3_SERVICE_NAME "slot3"
-#define RIL4_SERVICE_NAME "slot4"
+#define SOCKET_NAME_RIL "rild"
+#define SOCKET2_NAME_RIL "rild2"
+#define SOCKET3_NAME_RIL "rild3"
+#define SOCKET4_NAME_RIL "rild4"
+
+#define OEM_HOOK_SERVICE_NAME "oemhook"
+#define OEM_HOOK2_SERVICE_NAME "oemhook2"
+#define OEM_HOOK3_SERVICE_NAME "oemhook3"
+#define OEM_HOOK4_SERVICE_NAME "oemhook4"
 
 /* Constants for response types */
 #define RESPONSE_SOLICITED 0
@@ -87,7 +91,7 @@ typedef struct CommandInfo {
 
 RequestInfo * addRequestToList(int serial, int slotId, int request);
 
-char * RIL_getServiceName();
+char * RIL_getRilSocketName();
 
 void releaseWakeLock();
 
