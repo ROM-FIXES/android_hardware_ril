@@ -224,7 +224,7 @@ int main(int argc, char **argv) {
 
 done:
 
-    rilc_thread_pool();
+    //rilc_thread_pool();
 
     RLOGD("RIL_Init starting sleep loop");
     while (true) {
